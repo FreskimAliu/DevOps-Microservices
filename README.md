@@ -43,6 +43,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 * Create a virtualenv and activate it
     ``python3 -m venv ~/.devops``
+    
     ``source ~/.devops/bin/activate``
 
 * Run `make install` to install the necessary dependencies that are listed under __requirements.txt__ file.
