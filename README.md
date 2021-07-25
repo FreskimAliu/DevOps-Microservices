@@ -26,13 +26,20 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ## Setup the Environment
 
 * Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
+`python3 -m venv ~/.devops`
+`source ~/.devops/bin/activate`
+
+* Run `make install` to install the necessary dependencies that are listed under __requirements.txt__ file.
+
 
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+
+### Uploading image in Docker Hub
+* Run command: `./upload_docker.sh`
 
 ### Kubernetes Steps
 
