@@ -22,6 +22,21 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 **The final implementation of the project will showcase your abilities to operationalize production microservices.**
 
 ---
+## File structure
+    
+    ├──  .cirlceci               # CircleCI  configuration folder
+    │   ├── config.yml              
+    ├──  output_txt_files       # d
+    │   ├── docker_out.txt          
+    │   ├── kubernetes_out.txt     
+    ├──  Dockerfile
+    ├──  Makefile
+    ├──  app.py
+    ├──  make_prediction.sh
+    ├──  requirements.txt
+    ├──  run_docker.sh
+    ├──  run_kubernetes.sh
+    ├──  upload_docker.sh
 
 ## Setup the Environment
 
