@@ -22,17 +22,39 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 **The final implementation of the project will showcase your abilities to operationalize production microservices.**
 
 ---
-
+## File structure
+    
+    ├──  .cirlceci                  # CircleCI configuration folder.
+    │   ├── config.yml              
+    ├──  output_txt_files           # Log outputs from Docker and Kubernetes are saved in this directory.
+    │   ├── docker_out.txt          
+    │   ├── kubernetes_out.txt     
+    ├──  Dockerfile                 # The Dockerfile creates a working directory, install the necessary dependencies, expose port 80, and specify that app.py run at container launch.
+    ├──  Makefile                   # The Makefile install the nesserary dependencies for Python, lint the python code and Dockerfile.
+    ├──  app.py                     # Application code is saved here.
+    ├──  make_prediction.sh         # Shell script to send predictions.
+    ├──  requirements.txt           # File to save Python dependencies.
+    ├──  run_docker.sh              # Build, list, and run steps are completed in this script.
+    ├──  run_kubernetes.sh          # This script runs a docker image with kubernetes, lists the kubernetes pod(s), and forwards the container port to a host.
+    ├──  upload_docker.sh           # The built docker image is uploaded to Docker Hub.
+    
+    
 ## Setup the Environment
 
-* Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
+* Create a virtualenv `python3 -m venv ~/.devops`
+* Active the virtualenv `source ~/.devops/bin/activate`
+    
+* Run `make install` to install the necessary dependencies that are listed under __requirements.txt__ file.
+
 
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+
+### Uploading image in Docker Hub
+* Run command: `./upload_docker.sh`
 
 ### Kubernetes Steps
 
